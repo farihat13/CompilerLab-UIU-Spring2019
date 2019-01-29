@@ -107,6 +107,12 @@ Point SymbolTable::search(SymbolInfo &symbol) {
     int i = getHashKey(symbol);
     int j = 0;
 
+    if (symbol.name == ""){
+        i = -1;
+        Point pos(i,j);
+        return pos;
+    }
+
     SymbolInfo *temp = list[i];
     while (1) {
         if (temp == NULL) {
@@ -131,7 +137,7 @@ Point SymbolTable::_delete(SymbolInfo &symbol) {
     int i = getHashKey(symbol);
     int j = 0;
 
-    if (list[i] == NULL) { // nothing exists in that hash-key entry to delete
+    if (list[i] == NULL || symbol.name == "") { // nothing exists in that hash-key entry to delete
         i = -1;
     } else {
         SymbolInfo *temp = list[i], *prev = NULL;
@@ -194,17 +200,24 @@ void SymbolTable::show() {
 
 
 SymbolInfo takeSymbolAsInput() {
-    string line;
-    cout << "Enter name,type: ";
-    getline(cin, line);
+    while (1) {
+        string line;
+        cout << "Enter name,type: ";
+        getline(cin, line);
 //    cout << "entered " << line << ".\n";
-    istringstream ins(line);
-    SymbolInfo symbol;
-    getline(ins, symbol.name, ',');
-    getline(ins, symbol.type, ',');
+        istringstream ins(line);
+        SymbolInfo symbol;
+        getline(ins, symbol.name, ',');
+        getline(ins, symbol.type, ',');
 //    cout << symbol.name << " " << symbol.type;
-    return symbol;
+        if (symbol.name == "")
+            continue;
+        if (symbol.type == "")
+            continue;
+        return symbol;
+    }
 }
+
 
 void insert() {
     SymbolInfo symbol = takeSymbolAsInput();
@@ -261,7 +274,7 @@ void update() {
 
         Point pos = symbolTable.insert(updatedSymbol);
         if (pos.i == -1) {
-            cout << "< " << updatedSymbol.name << " already exists.\n";
+            cout << updatedSymbol.name << " already exists.\n";
         } else {
             cout << "< " << updatedSymbol.name << " : " << updatedSymbol.type << " >" << " inserted at position "
                  << pos.i << " , " << pos.j << "\n";
