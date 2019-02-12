@@ -285,14 +285,15 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 8
-#define YY_END_OF_BUFFER 9
-static yyconst short int yy_accept[33] =
+#define YY_NUM_RULES 14
+#define YY_END_OF_BUFFER 15
+static yyconst short int yy_accept[51] =
     {   0,
-        0,    0,    9,    8,    1,    2,    8,    8,    3,    5,
-        5,    1,    6,    0,    0,    3,    3,    5,    5,    4,
-        4,    6,    4,    4,    4,    4,    0,    0,    7,    7,
-        7,    0
+        0,    0,   15,   13,    1,    2,   13,    4,    3,    6,
+        6,    1,   12,   11,    0,    4,    4,   10,   10,    3,
+        3,    6,    6,    5,    5,    0,   11,    0,    0,    9,
+        5,    5,    5,    5,    0,    0,    9,    9,    9,    0,
+        7,    0,    8,    9,    9,    7,    7,    8,    8,    0
     } ;
 
 static yyconst int yy_ec[256] =
@@ -308,7 +309,7 @@ static yyconst int yy_ec[256] =
         8,    8,    8,    8,    8,    8,    8,    8,    8,    8,
         1,    1,    1,    1,    8,    1,    8,    8,    8,    8,
 
-        8,    8,    8,    8,    8,    8,    8,    8,    8,   10,
+       10,    8,    8,    8,    8,    8,    8,    8,    8,   11,
         8,    8,    8,    8,    8,    8,    8,    8,    8,    8,
         8,    8,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -327,49 +328,66 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[11] =
+static yyconst int yy_meta[12] =
     {   0,
-        1,    1,    1,    1,    2,    3,    3,    4,    4,    4
+        1,    2,    1,    1,    3,    4,    4,    5,    6,    6,
+        5
     } ;
 
-static yyconst short int yy_base[40] =
+static yyconst short int yy_base[58] =
     {   0,
-        0,    0,   69,   70,   66,   70,    0,   62,    6,    8,
-       15,   64,    0,    0,   60,   57,    0,    0,   20,   27,
-       37,   41,    0,    0,    0,    0,   44,   42,   46,   32,
-        0,   70,   26,   52,   53,   14,   55,   57,   59
+        0,    0,   97,  118,   86,  118,   85,    7,   13,   15,
+       22,   82,   81,   76,   32,    0,   71,    0,   39,   66,
+        0,    0,   41,   48,   59,   56,   65,   72,   43,   74,
+        0,    0,    0,    0,   78,   82,   84,   38,    0,   37,
+       86,   33,   88,   29,    0,   28,    0,   17,    0,  118,
+       94,   95,   98,  101,  105,  108,  111
     } ;
 
-static yyconst short int yy_def[40] =
+static yyconst short int yy_def[58] =
     {   0,
-       32,    1,   32,   32,   32,   32,   33,   34,   32,   35,
-       32,   32,   33,   36,   34,    9,    9,   37,   35,   32,
-       32,   36,   38,   20,   39,   21,   32,   32,   32,   29,
-       29,    0,   32,   32,   32,   32,   32,   32,   32
+       50,    1,   50,   50,   50,   50,   51,   50,    8,   52,
+       50,   50,   50,   51,   50,    8,    8,   53,   53,    9,
+        9,   54,   52,   50,   50,   55,   50,   50,   50,   53,
+       56,   24,   57,   25,   50,   50,   50,   30,   30,   50,
+       50,   50,   50,   37,   37,   41,   41,   43,   43,    0,
+       50,   50,   50,   50,   50,   50,   50
     } ;
 
-static yyconst short int yy_nxt[81] =
+static yyconst short int yy_nxt[130] =
     {   0,
-        4,    5,    6,    4,    7,    8,    9,   10,   10,   11,
-       14,   16,   17,   18,   18,   20,   22,   20,   20,   20,
-       18,   18,   21,   21,   21,   18,   18,   20,   13,   20,
-       20,   20,   23,   23,   24,   24,   24,   20,   30,   20,
-       20,   20,   25,   25,   26,   26,   26,   28,   29,   27,
-       29,   30,   31,   15,   15,   19,   19,   18,   18,   23,
-       23,   25,   25,   16,   14,   12,   14,   12,   32,    3,
-       32,   32,   32,   32,   32,   32,   32,   32,   32,   32
+        4,    5,    6,    4,    7,    8,    9,   10,   10,   10,
+       11,   15,   16,   17,   18,   19,   19,   18,   20,   21,
+       22,   22,   24,   48,   24,   24,   24,   22,   22,   25,
+       25,   25,   25,   13,   46,   44,   26,   27,   27,   43,
+       28,   28,   29,   41,   38,   30,   22,   22,   24,   37,
+       24,   24,   24,   31,   31,   32,   32,   32,   32,   24,
+       26,   24,   24,   24,   33,   33,   34,   34,   34,   34,
+       27,   27,   20,   35,   36,   29,   17,   50,   37,   38,
+       39,   40,   13,   12,   41,   42,   13,   12,   43,   44,
+       45,   46,   47,   48,   49,   14,   50,   14,   23,   23,
+
+       23,   18,   18,   18,   22,   22,   22,   28,   50,   50,
+       28,   31,   31,   31,   33,   33,   33,    3,   50,   50,
+       50,   50,   50,   50,   50,   50,   50,   50,   50
     } ;
 
-static yyconst short int yy_chk[81] =
+static yyconst short int yy_chk[130] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        9,    9,    9,   10,   10,   11,   36,   11,   11,   11,
-       11,   11,   11,   11,   11,   19,   19,   20,   33,   20,
-       20,   20,   20,   20,   20,   20,   20,   21,   30,   21,
-       21,   21,   21,   21,   21,   21,   21,   27,   28,   22,
-       27,   29,   29,   34,   34,   35,   35,   37,   37,   38,
-       38,   39,   39,   16,   15,   12,    8,    5,    3,   32,
-       32,   32,   32,   32,   32,   32,   32,   32,   32,   32
+        1,    8,    8,    8,    8,    8,    8,    8,    9,    9,
+       10,   10,   11,   48,   11,   11,   11,   11,   11,   11,
+       11,   11,   11,   15,   46,   44,   15,   15,   15,   42,
+       15,   15,   19,   40,   38,   19,   23,   23,   24,   29,
+       24,   24,   24,   24,   24,   24,   24,   24,   24,   25,
+       26,   25,   25,   25,   25,   25,   25,   25,   25,   25,
+       27,   27,   20,   27,   27,   28,   17,   14,   28,   30,
+       30,   35,   13,   12,   35,   36,    7,    5,   36,   37,
+       37,   41,   41,   43,   43,   51,    3,   51,   52,   52,
+
+       52,   53,   53,   53,   54,   54,   54,   55,    0,    0,
+       55,   56,   56,   56,   57,   57,   57,   50,   50,   50,
+       50,   50,   50,   50,   50,   50,   50,   50,   50
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -394,7 +412,7 @@ int line_count=1;
 FILE *logout;
 FILE *tokenout;
 
-#line 398 "lex.yy.c"
+#line 416 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -548,7 +566,7 @@ YY_DECL
 #line 19 "CSI412-assignment2.l"
 
 
-#line 552 "lex.yy.c"
+#line 570 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -599,13 +617,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 33 )
+				if ( yy_current_state >= 51 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 70 );
+		while ( yy_base[yy_current_state] != 118 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -644,57 +662,103 @@ YY_RULE_SETUP
 case 3:
 YY_RULE_SETUP
 #line 24 "CSI412-assignment2.l"
-{
-			
+{	
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 1\n",line_count,yytext);
 			printf("Line no %d:  %s -> pattern 1\n",line_count,yytext);
-		}		
+		}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 30 "CSI412-assignment2.l"
+#line 29 "CSI412-assignment2.l"
+{
+			fprintf(logout,"Line no %d: Lexeme %s found. matched NOT pattern 1\n",line_count,yytext);
+			printf("Line no %d:  %s -> NOT pattern 1\n",line_count,yytext);
+		}	
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 36 "CSI412-assignment2.l"
 {
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 5\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 5\n",line_count,yytext);
 		}
 	YY_BREAK
-case 5:
+case 6:
 YY_RULE_SETUP
-#line 35 "CSI412-assignment2.l"
+#line 42 "CSI412-assignment2.l"
 {
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 2\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 2\n",line_count,yytext);
 		}
 	YY_BREAK
-case 6:
-YY_RULE_SETUP
-#line 40 "CSI412-assignment2.l"
-{
-			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 3\n",line_count,yytext);
-			printf("Line no %d: Lexeme %s -> pattern 3\n",line_count,yytext);
-		}
-	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 45 "CSI412-assignment2.l"
+#line 48 "CSI412-assignment2.l"
 {
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 4\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 4\n",line_count,yytext);
 		}
 	YY_BREAK
+case 8:
+YY_RULE_SETUP
+#line 53 "CSI412-assignment2.l"
+{
+			fprintf(logout,"Line no %d: Lexeme %s found. matched NOT pattern 4\n",line_count,yytext);
+			printf("Line no %d: Lexeme %s -> NOT pattern 4\n",line_count,yytext);
+		}
+	YY_BREAK
+case 9:
+YY_RULE_SETUP
+#line 58 "CSI412-assignment2.l"
+{
+			fprintf(logout,"Line no %d: Lexeme %s found. matched NOT pattern 4\n",line_count,yytext);
+			printf("Line no %d: Lexeme %s -> NOT pattern 4\n",line_count,yytext);
+		}			
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 64 "CSI412-assignment2.l"
+{
+			fprintf(logout,"Line no %d: Lexeme %s found. matched NOT pattern 2\n",line_count,yytext);
+			printf("Line no %d: Lexeme %s -> NOT pattern 2\n",line_count,yytext);
+		}
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 70 "CSI412-assignment2.l"
+{
+			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 3\n",line_count,yytext);
+			printf("Line no %d: Lexeme %s -> pattern 3\n",line_count,yytext);
+		}
+	YY_BREAK
+case 12:
+YY_RULE_SETUP
+#line 75 "CSI412-assignment2.l"
+{
+			fprintf(logout,"Line no %d: Lexeme %s found. matched NOT pattern 3\n",line_count,yytext);
+			printf("Line no %d: Lexeme %s -> NOT pattern 3\n",line_count,yytext);
+		}
+	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 50 "CSI412-assignment2.l"
+#line 82 "CSI412-assignment2.l"
 {
 			printf("Total Line Number: %d \n",line_count); 
 			return 0;
 		}
 	YY_BREAK
-case 8:
+case 13:
 YY_RULE_SETUP
-#line 57 "CSI412-assignment2.l"
+#line 87 "CSI412-assignment2.l"
+{
+			fprintf(logout,"unrecognized pattern %s\n",yytext);
+		}
+	YY_BREAK
+case 14:
+YY_RULE_SETUP
+#line 92 "CSI412-assignment2.l"
 ECHO;
 	YY_BREAK
-#line 698 "lex.yy.c"
+#line 762 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -984,7 +1048,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 33 )
+			if ( yy_current_state >= 51 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1019,11 +1083,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 33 )
+		if ( yy_current_state >= 51 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 32);
+	yy_is_jam = (yy_current_state == 50);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1578,7 +1642,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 57 "CSI412-assignment2.l"
+#line 92 "CSI412-assignment2.l"
 
 
 int main(int argc,char *argv[]){
