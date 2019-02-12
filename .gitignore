@@ -1,3 +1,7 @@
+*lex.yy.c
+*log.txt
+*token.txt
+
 # Prerequisites
 *.d
 

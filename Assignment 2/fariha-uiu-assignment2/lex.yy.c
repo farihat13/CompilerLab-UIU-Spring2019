@@ -285,11 +285,11 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 9
-#define YY_END_OF_BUFFER 10
+#define YY_NUM_RULES 8
+#define YY_END_OF_BUFFER 9
 static yyconst short int yy_accept[33] =
     {   0,
-        0,    0,   10,    8,    1,    2,    8,    8,    3,    5,
+        0,    0,    9,    8,    1,    2,    8,    8,    3,    5,
         5,    1,    6,    0,    0,    3,    3,    5,    5,    4,
         4,    6,    4,    4,    4,    4,    0,    0,    7,    7,
         7,    0
@@ -645,13 +645,14 @@ case 3:
 YY_RULE_SETUP
 #line 24 "CSI412-assignment2.l"
 {
+			
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 1\n",line_count,yytext);
 			printf("Line no %d:  %s -> pattern 1\n",line_count,yytext);
-		}
+		}		
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 29 "CSI412-assignment2.l"
+#line 30 "CSI412-assignment2.l"
 {
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 5\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 5\n",line_count,yytext);
@@ -659,7 +660,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 34 "CSI412-assignment2.l"
+#line 35 "CSI412-assignment2.l"
 {
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 2\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 2\n",line_count,yytext);
@@ -667,7 +668,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 39 "CSI412-assignment2.l"
+#line 40 "CSI412-assignment2.l"
 {
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 3\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 3\n",line_count,yytext);
@@ -675,14 +676,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 44 "CSI412-assignment2.l"
+#line 45 "CSI412-assignment2.l"
 {
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 4\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 4\n",line_count,yytext);
-		}	
+		}
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 49 "CSI412-assignment2.l"
+#line 50 "CSI412-assignment2.l"
 {
 			printf("Total Line Number: %d \n",line_count); 
 			return 0;
@@ -690,17 +691,10 @@ case YY_STATE_EOF(INITIAL):
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 53 "CSI412-assignment2.l"
-{
-			fprintf(logout,"unrecognized pattern %s\n",yytext);
-		}
-	YY_BREAK
-case 9:
-YY_RULE_SETUP
-#line 58 "CSI412-assignment2.l"
+#line 57 "CSI412-assignment2.l"
 ECHO;
 	YY_BREAK
-#line 704 "lex.yy.c"
+#line 698 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -1584,7 +1578,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 58 "CSI412-assignment2.l"
+#line 57 "CSI412-assignment2.l"
 
 
 int main(int argc,char *argv[]){

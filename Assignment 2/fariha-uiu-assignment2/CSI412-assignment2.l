@@ -22,8 +22,16 @@ NEWLINE \n
 {NEWLINE} {line_count++;}
 
 [1-9]+{DIGIT}*	{
+			
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 1\n",line_count,yytext);
 			printf("Line no %d:  %s -> pattern 1\n",line_count,yytext);
+		}
+		
+			
+		
+n[^0-9 \t\f\r\v,]+[a-zA-Z0-9_]*	{
+			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 5\n",line_count,yytext);
+			printf("Line no %d: Lexeme %s -> pattern 5\n",line_count,yytext);
 		}
  
 [a-zA-Z_]+[a-zA-Z0-9_]*		{
@@ -39,11 +47,6 @@ NEWLINE \n
 [0-9]+[.][0-9]+[E][+-]?[1-9]+{DIGIT}* 	{
 			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 4\n",line_count,yytext);
 			printf("Line no %d: Lexeme %s -> pattern 4\n",line_count,yytext);
-		}	
-		
-n[^0-9 \t\f\r\v,]+[a-zA-Z0-9_]*	{
-			fprintf(logout,"Line no %d: Lexeme %s found. matched pattern 5\n",line_count,yytext);
-			printf("Line no %d: Lexeme %s -> pattern 5\n",line_count,yytext);
 		}
 		
 <<EOF>> 	{

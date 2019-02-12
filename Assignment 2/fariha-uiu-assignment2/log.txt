@@ -1,13 +1,10 @@
 Line no 1: Lexeme 1 found. matched pattern 1
 Line no 1: Lexeme 11 found. matched pattern 1
 Line no 1: Lexeme 3455 found. matched pattern 1
-unrecognized pattern 0
-unrecognized pattern 0
 Line no 2: Lexeme 9 found. matched pattern 1
 Line no 4: Lexeme a_bhu found. matched pattern 2
 Line no 4: Lexeme _ijk found. matched pattern 2
 Line no 4: Lexeme w30ui_89ji found. matched pattern 2
-unrecognized pattern 0
 Line no 5: Lexeme uiu found. matched pattern 2
 Line no 5: Lexeme 1 found. matched pattern 1
 Line no 5: Lexeme _dfef found. matched pattern 2
@@ -16,15 +13,12 @@ Line no 7: Lexeme 1.0 found. matched pattern 3
 Line no 7: Lexeme .99 found. matched pattern 3
 Line no 7: Lexeme 0.99 found. matched pattern 3
 Line no 8: Lexeme 1 found. matched pattern 1
-unrecognized pattern .
 Line no 10: Lexeme 3.0E5 found. matched pattern 4
 Line no 10: Lexeme 34.67E+4 found. matched pattern 4
 Line no 10: Lexeme 2.98E-55 found. matched pattern 4
 Line no 11: Lexeme 3.0 found. matched pattern 3
 Line no 11: Lexeme e found. matched pattern 2
-unrecognized pattern +
 Line no 11: Lexeme 9 found. matched pattern 1
-unrecognized pattern 0
 Line no 11: Lexeme E5 found. matched pattern 2
 Line no 13: Lexeme nabt found. matched pattern 5
 Line no 13: Lexeme nw_98uio found. matched pattern 5
